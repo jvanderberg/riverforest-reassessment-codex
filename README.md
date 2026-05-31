@@ -23,6 +23,10 @@ npm run check
 npm run build
 ```
 
+GitHub Pages uses `npm run build:site`, which builds from the committed static
+data in `public/data/` so deployments do not depend on live upstream API
+availability.
+
 ## Data
 
 The extractor writes static files to `public/data/` from Cook County public data

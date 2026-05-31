@@ -8,6 +8,7 @@
 		"dev": "vite",
 		"extract": "node scripts/extract.mjs",
 		"build": "npm run extract && tsc -b && vite build",
+		"build:site": "tsc -b && vite build",
 		"preview": "vite preview",
 		"test": "vitest run",
 		"check": "biome check . && tsc -b && vitest run",
