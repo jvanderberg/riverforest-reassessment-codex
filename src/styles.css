@@ -1,0 +1,131 @@
+@import "@fontsource-variable/geist";
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "leaflet/dist/leaflet.css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+	color-scheme: light;
+	--radius: 0.5rem;
+	--background: oklch(0.985 0.006 92);
+	--foreground: oklch(0.22 0.025 258);
+	--muted: oklch(0.93 0.01 250);
+	--muted-foreground: oklch(0.44 0.025 258);
+	--popover: oklch(0.99 0.004 92);
+	--border: oklch(0.84 0.018 250);
+	--primary: oklch(0.43 0.12 205);
+	--primary-foreground: oklch(0.99 0.004 92);
+	--accent: oklch(0.64 0.14 145);
+	--accent-foreground: oklch(0.18 0.025 258);
+	--destructive: oklch(0.58 0.2 29);
+	--ring: oklch(0.55 0.13 205);
+	--chart-1: oklch(0.52 0.14 245);
+	--chart-2: oklch(0.77 0.09 215);
+	--chart-3: oklch(0.94 0.11 105);
+	--chart-4: oklch(0.74 0.15 62);
+	--chart-5: oklch(0.55 0.2 28);
+}
+
+.dark {
+	color-scheme: dark;
+	--background: oklch(0.18 0.02 250);
+	--foreground: oklch(0.94 0.012 92);
+	--muted: oklch(0.26 0.025 250);
+	--muted-foreground: oklch(0.76 0.018 245);
+	--popover: oklch(0.2 0.022 250);
+	--border: oklch(0.34 0.03 248);
+	--primary: oklch(0.72 0.12 205);
+	--primary-foreground: oklch(0.16 0.02 250);
+	--accent: oklch(0.72 0.13 145);
+	--accent-foreground: oklch(0.14 0.018 250);
+	--destructive: oklch(0.7 0.18 29);
+	--ring: oklch(0.72 0.12 205);
+	--chart-1: oklch(0.66 0.13 245);
+	--chart-2: oklch(0.8 0.08 215);
+	--chart-3: oklch(0.9 0.1 105);
+	--chart-4: oklch(0.78 0.14 62);
+	--chart-5: oklch(0.68 0.18 28);
+}
+
+@theme inline {
+	--font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-popover: var(--popover);
+	--color-border: var(--border);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-ring: var(--ring);
+	--color-chart-1: var(--chart-1);
+	--color-chart-2: var(--chart-2);
+	--color-chart-3: var(--chart-3);
+	--color-chart-4: var(--chart-4);
+	--color-chart-5: var(--chart-5);
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: var(--radius);
+	--radius-lg: calc(var(--radius) + 4px);
+}
+
+html,
+body,
+#root {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-sans);
+}
+
+button,
+input {
+	font: inherit;
+}
+
+.leaflet-container {
+	background: var(--muted);
+	color: var(--foreground);
+	font-family: var(--font-sans);
+}
+
+.leaflet-container .leaflet-popup-content-wrapper,
+.leaflet-container .leaflet-popup-tip {
+	background: var(--popover);
+	color: var(--foreground);
+	border: 1px solid var(--border);
+	box-shadow: 0 8px 28px oklch(0 0 0 / 22%);
+}
+
+.leaflet-container .leaflet-popup-content {
+	margin: 0;
+}
+
+.leaflet-container .leaflet-tooltip {
+	background: var(--popover);
+	color: var(--foreground);
+	border-color: var(--border);
+	box-shadow: 0 4px 18px oklch(0 0 0 / 18%);
+}
+
+.leaflet-control-zoom a {
+	background: var(--popover) !important;
+	color: var(--foreground) !important;
+	border-color: var(--border) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
+}

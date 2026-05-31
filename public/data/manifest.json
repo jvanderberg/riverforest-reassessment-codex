@@ -1,0 +1,46 @@
+{
+  "generatedAt": "2026-05-31T01:39:03.311Z",
+  "jurisdiction": "River Forest, Illinois",
+  "currentYear": 2026,
+  "previousYear": 2025,
+  "recordCount": 4534,
+  "displayedCount": 4163,
+  "placement": {
+    "direct-pin": 2925,
+    "parent-pin": 1068,
+    "address": 170,
+    "missing": 371
+  },
+  "sources": {
+    "assessedValues": {
+      "label": "Cook County Assessor - Assessed Values",
+      "url": "https://datacatalog.cookcountyil.gov/d/uzyt-m557",
+      "rowCount": 9068
+    },
+    "parcelAddresses": {
+      "label": "Cook County Assessor - Parcel Addresses",
+      "url": "https://datacatalog.cookcountyil.gov/d/3723-97qp",
+      "rowCount": 4533
+    },
+    "addressPoints": {
+      "label": "Cook County Address Points",
+      "url": "https://datacatalog.cookcountyil.gov/d/78yw-iddh",
+      "rowCount": 3100
+    },
+    "parcelGeometry": {
+      "label": "Cook County Parcel 2022 FeatureServer",
+      "url": "https://gis.cookcountyil.gov/hosting/rest/services/Hosted/Parcel_2022/FeatureServer/0",
+      "rowCount": 2987
+    },
+    "municipalBoundary": {
+      "label": "Cook County Municipalities FeatureServer",
+      "url": "https://services.arcgis.com/F7DSX1DSNSiWmOqh/arcgis/rest/services/Cook_County_Municipalities/FeatureServer/0",
+      "rowCount": 1
+    }
+  },
+  "knownGaps": [
+    "Market values are estimated from Cook County assessed values by dividing by the assessment level for each property class.",
+    "371 of 4534 records do not have coordinates and are omitted from the marker layer.",
+    "Condominium units may share a parent parcel or address point where Cook County publishes one building geometry for many PINs."
+  ]
+}

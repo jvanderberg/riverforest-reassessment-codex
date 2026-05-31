@@ -1,0 +1,47 @@
+{
+	"name": "riverforest-reassessment-codex",
+	"version": "1.0.0",
+	"description": "Static River Forest reassessment explorer.",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "vite",
+		"extract": "node scripts/extract.mjs",
+		"build": "npm run extract && tsc -b && vite build",
+		"preview": "vite preview",
+		"test": "vitest run",
+		"check": "biome check . && tsc -b && vitest run",
+		"check:fix": "biome check --write . && tsc -b && vitest run"
+	},
+	"dependencies": {
+		"@fontsource-variable/geist": "^5.2.8",
+		"@radix-ui/react-slot": "^1.2.4",
+		"@tailwindcss/vite": "^4.1.8",
+		"@turf/helpers": "^7.2.0",
+		"@turf/union": "^7.2.0",
+		"@vitejs/plugin-react": "^4.5.0",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"jsdom": "^26.1.0",
+		"leaflet": "^1.9.4",
+		"lucide-react": "^0.511.0",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
+		"react-leaflet": "^5.0.0",
+		"tailwind-merge": "^3.3.0",
+		"tailwindcss": "^4.1.8",
+		"tw-animate-css": "^1.3.0",
+		"typescript": "^5.8.3",
+		"vite": "^6.3.5",
+		"vitest": "^3.1.4",
+		"zustand": "^5.0.5"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/geojson": "^7946.0.16",
+		"@types/leaflet": "^1.9.18",
+		"@types/node": "^25.9.1",
+		"@types/react": "^19.1.6",
+		"@types/react-dom": "^19.1.5"
+	}
+}
